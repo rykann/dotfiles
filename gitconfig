@@ -1,0 +1,29 @@
+[user]
+	name = <name>
+	email = <email>
+[core]
+	editor = mvim -f
+	excludesfile = /Users/ryank/.gitignore
+[color]
+	ui = auto
+[alias]
+	st = status
+	co = checkout
+	ci = commit
+	br = branch
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+	l1 = log -1
+	l2 = log -2
+	l3 = log -3
+	l4 = log -4
+	l5 = log -5
+	ll = log origin/master..HEAD
+	sync = "!f() { echo Syncing this branch with master && git checkout master && git pull && git checkout – && git rebase master; }; f"
+	wc = whatchanged
+	df = diff
+	pub = "!f() { git push origin HEAD:`git symbolic-ref --short -q HEAD` -f -u; }; f" # push the current branch to origin
+	drb = "!bash -c \"[[ $# = 1 ]] && git push origin :$1 && git br -D $1 || echo Missing argument: remote branch name\"" # delete local and remote branch with same name
+	diff-master = diff origin/master..HEAD
+	unstage = reset HEAD --
+[push]
+	default = upstream
