@@ -79,17 +79,17 @@ nnoremap <leader>at :AlternateToggle<cr>
 nnoremap <leader>av :AlternateVerticalSplit<cr>
 nnoremap <leader>as :AlternateHorizontalSplit<cr>
 
-" Put swap files in ~/tmp/.vim
-set backupdir=~/tmp/.vim
-set directory=~/tmp/.vim
+"put swap files in ~/.vim/swap
+set backupdir=~/.vim/swap
+set directory=~/.vim/swap
 
-" Enable matchit plugin (needed for ruby-matchit to work)
+"enable matchit plugin (needed for ruby-matchit to work)
 runtime macros/matchit.vim
 
-" use jk to get out of insert mode
+"use jk to get out of insert mode
 inoremap jk <esc>
 
-" edit and source vimrc and gvimrc mappings
+"edit and source vimrc and gvimrc mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
 nnoremap <leader>sv :source $MYVIMRC<cr>
 
