@@ -16,6 +16,6 @@ export RUBY_HEAP_FREE_MIN=100000
 
 # powerline-shell (https://github.com/milkbikis/powerline-shell)
 function _update_ps1() {
-  export PS1="$(~/powerline-shell.py $?)"
+  export PS1="$(~/tools/powerline-shell/powerline-shell.py $? 2> /dev/null)"
 }
-export PROMPT_COMMAND="_update_ps1"
+export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
