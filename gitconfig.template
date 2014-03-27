@@ -1,6 +1,6 @@
 [user]
-	name = <name>
-	email = <email>
+        name = <name>
+        email = <email>
 [core]
 	editor = mvim -f
 	excludesfile = /Users/ryank/.gitignore

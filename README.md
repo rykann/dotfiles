@@ -2,13 +2,7 @@ my dotfiles
 ===========
 
 To set up on a new machine, run this:
-```
-git clone https://github.com/rykann/dotfiles.git ~/.dotfiles
-cd ~/.dotfiles
-./symlinker.sh
-```
-
-Replace name and email placeholders in `gitconfig`.
-
-
-
+1. `git clone https://github.com/rykann/dotfiles.git ~/.dotfiles`
+2. `cd ~/.dotfiles`
+3. Copy `gitconfig.template` to `gitconfig` and replace name and email placeholders.
+4. ./symlinker.sh
