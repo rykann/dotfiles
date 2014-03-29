@@ -6,7 +6,7 @@ alias pingloop="ping -i 5 www.google.com"
 alias gitalias="git config -l | grep alias"
 alias start_postgres="postgres -D /usr/local/var/postgres"
 
-export PATH=/usr/local/bin:$PATH:~/bin:~/groupon-bin:~/.rvm/bin:~/.pip/bin
+export PATH=/usr/local/bin:$PATH:~/bin:~/.rvm/bin
 export BUNDLER_EDITOR=mvim
 
 # optimizations for ruby 1.9.3
