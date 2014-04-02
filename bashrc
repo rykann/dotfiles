@@ -1,6 +1,7 @@
 alias ll="ls -al"
 alias ls="ls -G"
 alias be="bundle exec"
+alias bundle='http_proxy=http://localhost:3132 bundle'
 alias gpp="git pull --rebase && git push"
 alias pingloop="ping -i 5 www.google.com"
 alias gitalias="git config -l | grep alias"
