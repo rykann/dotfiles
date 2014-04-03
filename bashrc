@@ -10,8 +10,9 @@ alias start_postgres="postgres -D /usr/local/var/postgres"
 export PATH=/usr/local/bin:$PATH:~/bin:~/.rvm/bin
 export BUNDLER_EDITOR=mvim
 
-# optimizations for ruby 1.9.3
-export RUBY_HEAP_MIN_SLOTS=600000
+# Ruby optimizations
+export RUBY_HEAP_MIN_SLOTS=600000 # this is deprecated in Ruby 2.1, replaced by the following variable
+export RUBY_GC_HEAP_INIT_SLOTS=600000
 export RUBY_GC_MALLOC_LIMIT=59000000
 export RUBY_HEAP_FREE_MIN=100000
 
