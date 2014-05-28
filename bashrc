@@ -16,6 +16,10 @@ export RUBY_GC_HEAP_INIT_SLOTS=600000
 export RUBY_GC_MALLOC_LIMIT=59000000
 export RUBY_HEAP_FREE_MIN=100000
 
+# Tomcat 8
+export JAVA_HOME=`/usr/libexec/java_home`
+export CATALINA_HOME=/usr/local/Cellar/tomcat/8.0.8/libexec
+
 # powerline-shell (https://github.com/milkbikis/powerline-shell)
 function _update_ps1() {
   export PS1="$(~/tools/powerline-shell/powerline-shell.py $? 2> /dev/null)"
