@@ -26,6 +26,9 @@ function _update_ps1() {
 }
 export PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"
 
+# nicely format JSON curl responses
+function jcurl() { curl -s -S $@ | python -m json.tool; }
+
 if [ -f ~/.dotfiles/local/bashrc ]
 then
   source ~/.dotfiles/local/bashrc
