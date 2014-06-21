@@ -34,3 +34,6 @@ if [ -f ~/.dotfiles/local/bashrc ]
 then
   source ~/.dotfiles/local/bashrc
 fi
+
+# git completion
+source ~/.dotfiles/bin/git-completion.sh
