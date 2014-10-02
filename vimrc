@@ -15,6 +15,7 @@ autocmd FileType html setlocal ts=2 sw=2 expandtab
 autocmd FileType javascript setlocal ts=2 sw=2 expandtab
 autocmd FileType coffee setlocal ts=2 sw=2 expandtab
 autocmd FileType cucumber setlocal ts=2 sw=2 expandtab
+autocmd FileType sh setlocal ts=2 sw=2 expandtab
 
 "CoffeeScript key mappings
 autocmd FileType coffee map <buffer> <leader>r :CoffeeRun<CR>
