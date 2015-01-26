@@ -6,6 +6,7 @@ alias gpp="git pull --rebase && git push"
 alias pingloop="ping -i 5 www.google.com"
 alias gitalias="git config -l | grep alias"
 alias gitprune='git checkout --quiet master && git branch --merged | grep --invert-match '\\*' | xargs -n 1 git branch --delete; git checkout --quiet @{-1};'
+alias serve="python -m SimpleHTTPServer"
 alias start_postgres="postgres -D /usr/local/var/postgres"
 [[ $(which gtar) ]] && alias tar="gtar"
 
