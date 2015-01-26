@@ -9,7 +9,7 @@ alias gitprune='git checkout --quiet master && git branch --merged | grep --inve
 alias start_postgres="postgres -D /usr/local/var/postgres"
 [[ $(which gtar) ]] && alias tar="gtar"
 
-export PATH=/usr/local/bin:$PATH:~/bin:~/.rvm/bin
+export PATH=/usr/local/bin:$PATH:~/bin
 export BUNDLER_EDITOR=mvim
 
 # Ruby optimizations
