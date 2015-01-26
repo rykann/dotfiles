@@ -1,4 +1,5 @@
-colorscheme codeschool
+set background=dark
+colorscheme solarized
 set guifont=Menlo:h14
 set guioptions-=T "hide toolbar in MacVim
 
