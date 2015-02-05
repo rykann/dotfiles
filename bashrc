@@ -49,3 +49,7 @@ fi
 
 # git completion
 source ~/.dotfiles/bin/git-completion.sh
+
+# chruby
+source /usr/local/opt/chruby/share/chruby/chruby.sh
+alias ch="chruby"
