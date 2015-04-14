@@ -98,3 +98,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 "copy path of current file to clipboard
 nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
+
+"use old regex engine (due to lagginess editing Ruby files)
+set re=1
