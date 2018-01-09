@@ -1,7 +1,6 @@
 set background=dark
 colorscheme solarized
 set guifont=Menlo:h14
-set guioptions-=T "hide toolbar in MacVim
 set nowrap
 
 let mapleader = ","
@@ -48,10 +47,6 @@ autocmd FileType ruby map <leader>r :call RunAllSpecs()<CR>
 
 "rspec.vim command
 let g:rspec_command = "!bundle exec rspec {spec}"
-
-"CoffeeScript key mappings
-autocmd FileType coffee map <buffer> <leader>r :CoffeeRun<CR>
-autocmd FileType coffee map <buffer> <leader>m :CoffeeCompile 15<CR>
 
 "strip trailing whitespace on save for certain file types
 "(add more file types separated by commas)
@@ -105,7 +100,6 @@ map <leader>ya :%y+<CR>
 " switch to previous buffer
 map <leader><leader> <C-^>
 
-map <F3> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>w :w<CR>
