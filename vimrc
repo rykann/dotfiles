@@ -2,6 +2,9 @@ set background=dark
 colorscheme solarized
 set guifont=Menlo:h14
 set guioptions-=T "hide toolbar in MacVim
+set nowrap
+
+let mapleader = ","
 
 "pathogen automatically loads plugins under ~/.vim/bundle
 "https://github.com/tpope/vim-pathogen
@@ -18,6 +21,33 @@ autocmd FileType coffee setlocal ts=2 sw=2 expandtab
 autocmd FileType cucumber setlocal ts=2 sw=2 expandtab
 autocmd FileType sh setlocal ts=2 sw=2 expandtab
 autocmd FileType yaml setlocal ts=2 sw=2 expandtab
+autocmd FileType json setlocal ts=2 sw=2 expandtab
+autocmd FileType scss setlocal ts=2 sw=2 expandtab
+autocmd FileType handlebars setlocal ts=2 sw=2 expandtab
+autocmd FileType python setlocal ts=4 sw=4 expandtab
+
+autocmd BufNewFile,BufRead Capfile set syntax=ruby
+
+" folding
+set foldenable
+set foldlevelstart=10 " 10 layers open by default
+set foldnestmax=10
+set foldmethod=syntax
+set foldlevel=1
+" folding toggle
+nnoremap <space> za
+
+" allow backspacing over more things in insert mode
+set backspace=indent,eol,start
+
+"rspec.vim mappings
+autocmd FileType ruby map <leader>t :call RunCurrentSpecFile()<CR>
+autocmd FileType ruby map <leader>s :call RunNearestSpec()<CR>
+autocmd FileType ruby map <leader>l :call RunLastSpec()<CR>
+autocmd FileType ruby map <leader>r :call RunAllSpecs()<CR>
+
+"rspec.vim command
+let g:rspec_command = "!bundle exec rspec {spec}"
 
 "CoffeeScript key mappings
 autocmd FileType coffee map <buffer> <leader>r :CoffeeRun<CR>
@@ -25,9 +55,12 @@ autocmd FileType coffee map <buffer> <leader>m :CoffeeCompile 15<CR>
 
 "strip trailing whitespace on save for certain file types
 "(add more file types separated by commas)
-autocmd FileType ruby autocmd BufWritePre <buffer> :%s/\s\+$//e
+autocmd FileType ruby,javascript,python autocmd BufWritePre <buffer> :%s/\s\+$//e
 
-let mapleader = ","
+"alt-ruby.vim mappings
+nnoremap <leader>at :AlternateToggle<cr>
+nnoremap <leader>av :AlternateVerticalSplit<cr>
+nnoremap <leader>as :AlternateHorizontalSplit<cr>
 
 "line numbers
 set number
@@ -67,20 +100,17 @@ set hidden
 set ruler
 
 " copy buffer to clipboard
-map <leader>a :%y+<CR>
+map <leader>ya :%y+<CR>
+
+" switch to previous buffer
+map <leader><leader> <C-^>
 
 map <F3> :NERDTreeToggle<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
-nnoremap <F4> :buffers<CR>:buffer<Space>
-"nnoremap <D-r> :CoffeeRun<CR>
-
-"key mappings for alt-ruby.vim
-nnoremap <leader>at :AlternateToggle<cr>
-nnoremap <leader>av :AlternateVerticalSplit<cr>
-nnoremap <leader>as :AlternateHorizontalSplit<cr>
+nmap <leader>c :!ctags -R<CR>
 
 "put swap files in ~/.vim/swap
 set backupdir=~/.vim/swap
@@ -100,4 +130,12 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 nnoremap <silent> ,cf :let @* = expand("%:~")<CR>
 
 "use old regex engine (due to lagginess editing Ruby files)
-set re=1
+"set re=1
+
+set clipboard=unnamed
+
+"ctrlp (https://github.com/kien/ctrlp.vim)
+let g:ctrlp_custom_ignore = '\v(bower_components|node_modules|dist|tmp|\.git)$'
+
+"hit F5 to toggle bewteen solarized dark and light colorschemes
+call togglebg#map("<F5>")
