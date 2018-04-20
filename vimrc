@@ -40,10 +40,8 @@ nnoremap <space> za
 set backspace=indent,eol,start
 
 "rspec.vim mappings
-autocmd FileType ruby map <leader>t :call RunCurrentSpecFile()<CR>
-autocmd FileType ruby map <leader>s :call RunNearestSpec()<CR>
-autocmd FileType ruby map <leader>l :call RunLastSpec()<CR>
-autocmd FileType ruby map <leader>r :call RunAllSpecs()<CR>
+autocmd FileType ruby map <leader>r :call RunCurrentSpecFile()<CR>
+autocmd FileType ruby map <leader>l :call RunNearestSpec()<CR>
 
 "rspec.vim command
 let g:rspec_command = "!bundle exec rspec {spec}"
@@ -110,6 +108,9 @@ nmap <leader>c :!ctags -R<CR>
 set backupdir=~/.vim/swap
 set directory=~/.vim/swap
 
+"disable swap files
+set noswapfile
+
 "enable matchit plugin (needed for ruby-matchit to work)
 runtime macros/matchit.vim
 
@@ -133,3 +134,6 @@ let g:ctrlp_custom_ignore = '\v(bower_components|node_modules|dist|tmp|\.git)$'
 
 "hit F5 to toggle bewteen solarized dark and light colorschemes
 call togglebg#map("<F5>")
+
+"autosave
+autocmd FocusLost,BufLeave,TextChanged,TextChangedI * silent wall
