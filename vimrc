@@ -104,6 +104,9 @@ nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
 nmap <leader>c :!ctags -R<CR>
 
+"toggle paste mode
+set pastetoggle=<F2>
+
 "put swap files in ~/.vim/swap
 set backupdir=~/.vim/swap
 set directory=~/.vim/swap
