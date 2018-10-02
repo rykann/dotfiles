@@ -1,0 +1,61 @@
+alias ga="git add"
+alias gb="git branch"
+alias gca="git commit --amend"
+alias gcan="git commit --amend --no-edit"
+alias gci="git commit"
+alias gco="git checkout"
+alias gcom="git checkout master"
+alias gcp="git cherry-pick"
+alias gd="git diff"
+alias gdc="git diff --cached"
+alias gf="git fetch"
+alias gpush="git push"
+alias gpull="git pull"
+alias gs="git status"
+alias gsh="git show"
+alias gl="git log"
+alias gll="git ll"
+alias gl1="git log -1"
+alias gl3="git log -3"
+alias gl5="git log -5"
+alias gci="git commit"
+alias grh="git reset HEAD^"
+alias grhh="git reset --hard HEAD^"
+alias grph="git rev-parse head"
+alias grphc="grph | tee /dev/tty | pbcopy"
+alias grpo="git remote prune origin"
+alias grv="git remote -v"
+alias gw="git whatchanged"
+alias gw1="git whatchanged -1"
+alias gw3="git whatchanged -3"
+alias gw5="git whatchanged -5"
+alias gwip="git add . && git commit -m 'wip'"
+alias jdk7='export JAVA_HOME=$(/usr/libexec/java_home -v 1.7)'
+alias jdk8='export JAVA_HOME=$(/usr/libexec/java_home -v 1.8)'
+alias ll="ls -al"
+alias ls="ls -G"
+alias lr="ls -lrth | tail -10"
+alias be="bundle exec"
+alias bi="http_proxy=http://localhost:3132 bundle install"
+alias gpp="git pull --rebase && git push"
+alias gitalias="git config -l | grep alias"
+alias serve="python -m SimpleHTTPServer"
+alias start_postgres="postgres -D /usr/local/var/postgres"
+alias wifi="networksetup -setairportpower en0 off; sleep 1; networksetup -setairportpower en0 on"
+
+# rbenv
+alias rv="rbenv version"
+alias rvl="rbenv versions"
+alias rvs="rbenv shell"
+alias r19="rvs 1.9.3-p551"
+
+# RSpec / Rubocop
+alias rr="bin/rspec && bin/rubocop"
+
+# run jq on JSON in the clipboard
+alias pbj="pbpaste | jq '.'"
+
+if [ -f ~/.dotfiles/local/aliases ]
+then
+  source ~/.dotfiles/local/aliases
+fi
