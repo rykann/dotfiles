@@ -86,6 +86,10 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
+"easier window width adjustment
+nnoremap > 5<C-w>>
+nnoremap < 5<C-w><
+
 "suppress warnings about unsaved changes in hidden buffers
 set hidden
 
