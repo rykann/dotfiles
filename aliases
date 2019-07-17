@@ -55,6 +55,10 @@ alias rr="bin/rspec && bin/rubocop"
 # run jq on JSON in the clipboard
 alias pbj="pbpaste | jq '.'"
 
+# project shortcuts
+alias ss="script/server"
+alias sc="script/pry"
+
 if [ -f ~/.dotfiles/local/aliases ]
 then
   source ~/.dotfiles/local/aliases
