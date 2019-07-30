@@ -7,7 +7,7 @@
 
 ########## Variables
 
-dir=~/.dotfiles                    # dotfiles directory
+dir=~/dotfiles                    # dotfiles directory
 olddir=~/.dotfiles_old             # old dotfiles backup directory
 # list of files/folders to symlink in homedir
 files="ackrc aliases bash_profile bashrc gemrc gitconfig gitignore inputrc irbrc my.cnf rspec vimrc zshrc"

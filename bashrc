@@ -37,7 +37,7 @@ then
 fi
 
 # git completion
-source ~/.dotfiles/bin/git-completion.sh
+source ~/dotfiles/bin/git-completion.sh
 __git_complete gco _git_checkout
 __git_complete gb _git_branch
 
