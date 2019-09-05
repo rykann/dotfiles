@@ -123,6 +123,7 @@ runtime macros/matchit.vim
 
 "use jk to get out of insert mode
 inoremap jk <esc>
+inoremap kj <esc>
 
 "edit and source vimrc and gvimrc mappings
 nnoremap <leader>ev :vsplit $MYVIMRC<cr>
