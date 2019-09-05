@@ -56,7 +56,7 @@ plugins=(git ruby)
 
 # User configuration
 
-export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ryank/bin:/usr/local/opt/postgresql@9.6/bin"
+export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Users/ryank/bin:/usr/local/opt/mysql@5.6/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 source $ZSH/oh-my-zsh.sh
