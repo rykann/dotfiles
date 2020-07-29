@@ -27,14 +27,14 @@ autocmd FileType python setlocal ts=4 sw=4 expandtab
 
 autocmd BufNewFile,BufRead Capfile set syntax=ruby
 
-" folding
-set foldenable
-set foldlevelstart=10 " 10 layers open by default
-set foldnestmax=10
-set foldmethod=syntax
-set foldlevel=1
+" folding - disabled for now because `foldmethod=syntax` made insert mode super slow in Ruby files
+"set foldenable
+"set foldlevelstart=10 " 10 layers open by default
+"set foldnestmax=10
+"set foldmethod=syntax
+"set foldlevel=1
 " folding toggle
-nnoremap <space> za
+"nnoremap <space> za
 
 " allow backspacing over more things in insert mode
 set backspace=indent,eol,start
@@ -72,10 +72,10 @@ set gdefault
 set showmatch
 
 "highlight the cursor's line
-set cursorline
+"set cursorline
 
 "highlight the cursor's column
-set cursorcolumn
+"set cursorcolumn
 
 "display tabs and trailing spaces visually
 set list listchars=tab:\ \ ,trail:·
@@ -144,4 +144,4 @@ let g:ctrlp_custom_ignore = '\v(bower_components|node_modules|dist|tmp|\.git)$'
 call togglebg#map("<F5>")
 
 "autosave
-autocmd FocusLost,BufLeave,TextChanged,TextChangedI * silent wall
+"autocmd FocusLost,BufLeave,TextChanged,TextChangedI * silent wall
