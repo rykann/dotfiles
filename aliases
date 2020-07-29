@@ -63,3 +63,7 @@ if [ -f ~/.dotfiles/local/aliases ]
 then
   source ~/.dotfiles/local/aliases
 fi
+
+# for switching iTerm2 profiles
+alias light='echo -e "\033]50;SetProfile=Solarized Light\a"'
+alias dark='echo -e "\033]50;SetProfile=Solarized Dark\a"'
