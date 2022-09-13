@@ -1,3 +1,7 @@
+alias dc="docker-compose"
+alias dcd="docker-compose down"
+alias dcps="docker-compose ps"
+alias dcu="docker-compose up -d"
 alias ga="git add"
 alias gb="git branch"
 alias gca="git commit --amend"
@@ -15,6 +19,7 @@ alias gs="git status"
 alias gsh="git show"
 alias gl="git log"
 alias gll="git ll"
+alias glmh="git log main..head"
 alias gl1="git log -1"
 alias gl3="git log -3"
 alias gl5="git log -5"
@@ -58,6 +63,7 @@ alias pbj="pbpaste | jq '.'"
 # project shortcuts
 alias ss="script/server"
 alias sc="script/pry"
+alias vc="bin/rake validate_code"
 
 if [ -f ~/.dotfiles/local/aliases ]
 then
@@ -67,3 +73,8 @@ fi
 # for switching iTerm2 profiles
 alias light='echo -e "\033]50;SetProfile=Solarized Light\a"'
 alias dark='echo -e "\033]50;SetProfile=Solarized Dark\a"'
+
+# Kubernetes
+alias k=kubectl
+alias ka="kubectl cloud-elevator auth"
+alias kx=kubectx
