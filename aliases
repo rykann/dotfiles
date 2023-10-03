@@ -6,7 +6,7 @@ alias ga="git add"
 alias gb="git branch"
 alias gca="git commit --amend"
 alias gcan="git commit --amend --no-edit"
-alias gci="git commit"
+alias gci="git commit -v"
 alias gco="git checkout"
 alias gcom="git checkout master || git checkout main"
 alias gcp="git cherry-pick"
@@ -23,7 +23,6 @@ alias glmh="git log main..head"
 alias gl1="git log -1"
 alias gl3="git log -3"
 alias gl5="git log -5"
-alias gci="git commit"
 alias grh="git reset HEAD^"
 alias grhh="git reset --hard HEAD^"
 alias grph="git rev-parse head"
@@ -76,5 +75,5 @@ alias dark='echo -e "\033]50;SetProfile=Solarized Dark\a"'
 
 # Kubernetes
 alias k=kubectl
-alias ka="kubectl cloud-elevator auth"
+alias ka="kubectl cloud-elevator auth browser"
 alias kx=kubectx
